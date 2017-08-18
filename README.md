@@ -1,8 +1,6 @@
 # w3nonce
 composer package, which serves the functionality working with WordPress Nonces. That means to have especially wp_nonce_*() function implemented in an object orientated way.
 
-More about nonces in WordPress: https://codex.wordpress.org/Function_Reference/wp_nonce_url
-
 ## Installation
 ```shell
 	composer require bdow3nuts/w3nonce
