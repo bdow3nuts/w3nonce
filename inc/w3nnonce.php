@@ -124,3 +124,4 @@ class W3nonce
 	}
 
 }
+?>

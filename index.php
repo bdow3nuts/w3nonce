@@ -3,6 +3,7 @@
 Plugin Name: w3nonce
 Version: 1.0
 */
+
 define( 'PLUGIN_DIR', dirname(__FILE__).'/' );  
 require_once( PLUGIN_DIR . 'inc/w3nenvironment.php');
 require_once( PLUGIN_DIR . 'inc/w3nnonce.php');

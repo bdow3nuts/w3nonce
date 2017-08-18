@@ -25,3 +25,4 @@ class W3nonceenvironment {
 		return '/request/uri';
 	}
 }
+?>
