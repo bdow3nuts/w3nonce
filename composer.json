@@ -1,0 +1,17 @@
+{
+	"name" : "bdow3nuts/w3nonce",
+	"description" : "composer package, which serves the functionality working with WordPress Nonces. That means to have especially wp_nonce_*() function implemented in an object orientated way",
+	"type" : "package",
+	"keywords" : ["wordpress nonce","wp-nonces"],
+	"authors" : [{
+			"name" : "BDO W3nuts",
+			"email" : "bdo.w3nuts@gmail.com",
+			"role" : "BDO"
+		}
+	],
+	"require" : {
+		"php" : ">=5.3.2"
+	},
+	"minimum-stability" : "dev",
+	"license" : "MIT"
+}
