@@ -10,8 +10,8 @@
 		}
 	],
 	"require" : {
-		"php" : ">=5.3.2"
+		"php" : "^5.3.2",
+		"phpunit/phpunit" : "^4.4.0"
 	},
-	"minimum-stability" : "dev",
 	"license" : "MIT"
 }
