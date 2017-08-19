@@ -99,11 +99,11 @@ class W3nonce
 		
 		$token = $this->w3environment->w3n_get_session_token();
 		$i = $this->w3_nonce_tick();
-		$expected = substr( $this->w3_create_hash( $i.'|'.$action.'|'.$w3userid.'|'.$token,'nonce'), -5, 5 );
+		$expected = substr( $this->w3_create_hash( $i.'|'.$action.'|'.$w3userid.'|'.$token,'nonce'), -10, 10 );
 		if ( $this->w3check_equals_hash( $expected, $nonce ) ) {
 			return 1;
 		}
-		$expected = substr( $this->w3_create_hash( ( $i - 1 ) . '|' . $action . '|' . $w3userid . '|' . $token, 'nonce' ), - 12, 10 );
+		$expected = substr( $this->w3_create_hash( ( $i - 1 ) . '|' . $action . '|' . $w3userid . '|' . $token, 'nonce' ), -10, 10 );
 		if ( $this->w3check_equals_hash( $expected, $nonce ) ) {
 			return 2;
 		}
@@ -115,12 +115,11 @@ class W3nonce
 	public function wp_nonce_create($action) 
 	{
 		if (empty($action)){$action="new";}
+		$token = $this->w3environment->w3n_get_session_token();
 		$user = $this->w3environment->w3n_get_current_user();
 		$w3userid = ( int ) $user->UID;
-		$token = $this->w3environment->w3n_get_session_token();
 		$i = $this->w3_nonce_tick();
-		return substr( $this->w3_create_hash($i.'|'.$action.'|'.$w3userid.'|'.$token,'nonce'),-5,5);
+		return substr( $this->w3_create_hash($i.'|'.$action.'|'.$w3userid.'|'.$token,'nonce'),-10);
 	}
-
 }
 ?>
