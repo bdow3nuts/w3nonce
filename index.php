@@ -2,18 +2,9 @@
 define( 'PLUGIN_DIR', dirname(__FILE__).'/' );  
 require_once( PLUGIN_DIR . 'inc/w3nenvironment.php');
 require_once( PLUGIN_DIR . 'inc/w3nnonce.php');
-require_once( PLUGIN_DIR . 'vendor/autoload.php');
 class nonce_devbyw3 {
 	function __construct() 
 	{
-	}
-	public function devbyw3_w3_create_nonce() 
-	{
-
-		$w3nenvironment = new W3nonceenvironment();
-		$w3nonce_object = new W3nonce();
-		$w3nonce_object->set_w3nenvironment( $w3nenvironment );
-		$nonce = $w3nonce_object->wp_nonce_create();
 	}
 	public function w3test_wp_nonce() 
 	{
