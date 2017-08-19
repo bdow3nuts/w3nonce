@@ -3,7 +3,6 @@ class W3nonce
 {
 	private $w3environment;
 	private $nonce_lifetime = 86400;
-	private $formatter;
 	function __construct() {
 	}
 	private function hash_hmac( $w3algo, $w3data, $key, $raw_output = false ) {
