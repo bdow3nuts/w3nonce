@@ -1,12 +1,8 @@
 <?php
-/*
-Plugin Name: w3nonce
-Version: 1.0
-*/
-
 define( 'PLUGIN_DIR', dirname(__FILE__).'/' );  
 require_once( PLUGIN_DIR . 'inc/w3nenvironment.php');
 require_once( PLUGIN_DIR . 'inc/w3nnonce.php');
+require_once( PLUGIN_DIR . 'vendor/autoload.php');
 class nonce_devbyw3 {
 	function __construct() 
 	{
@@ -16,7 +12,7 @@ class nonce_devbyw3 {
 
 		$w3nenvironment = new W3nonceenvironment();
 		$w3nonce_object = new W3nonce();
-		$w3nonce_object->set_w3nenvironment( $w3environment );
+		$w3nonce_object->set_w3nenvironment( $w3nenvironment );
 		$nonce = $w3nonce_object->wp_nonce_create();
 	}
 	public function w3test_wp_nonce() 
@@ -48,4 +44,4 @@ class nonce_devbyw3 {
 		return $check;
 	}
 }
-add_action( 'the_content', array('nonce_devbyw3','w3test_wp_nonce'));
+nonce_devbyw3::w3test_wp_nonce();
