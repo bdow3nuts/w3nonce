@@ -23,6 +23,9 @@ class nonce_devbyw3 {
 		$verify_true = $w3nonce_object->w3_verify_nonce( $nonce, 'firstaction' );
 		echo '<br>we check nonce with '.$nonce.' and returns as : '.$verify_true;
 		$nonce_devbyw3->checkequalornot( $verify_true, 1 );
+		$w3nenvironment->set_userid( '456' );
+		echo 'we set new user id as: ';
+		$userid = $w3nenvironment->w3n_get_current_user();
 		$newnonce = $w3nonce_object->wp_nonce_create( 'firstactionagain' );
 		$verify_false_action = $w3nonce_object->w3_verify_nonce( $nonce, 'firstactionagain' );
 		$verify_false_actionrec =  $nonce_devbyw3->checkequalornot( $verify_false_action, 1 );
