@@ -23,7 +23,7 @@ class nonce_devbyw3 {
 		$verify_true = $w3nonce_object->w3_verify_nonce( $nonce, 'firstaction' );
 		echo '<br>we check nonce with '.$nonce.' and returns as : '.$verify_true;
 		$nonce_devbyw3->checkequalornot( $verify_true, 1 );
-		$w3nenvironment->set_userid( '456' );
+		$w3nenvironment->set_userid( '987' );
 		echo '<br> we set new user id as: ';
 		$userid = $w3nenvironment->w3n_get_current_user();
 		echo $userid->UID;
